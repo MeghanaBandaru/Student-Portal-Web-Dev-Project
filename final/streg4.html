@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign-Up</title>
+	<link rel="stylesheet" type="text/css" href="style5.css">
+    <link rel="shortcut icon" href="images/tree.png" />
+
+    <script type="text/javascript" src="script2.js"></script>
+
+
+</head>
+<body>
+	<header>
+        <div id="start">
+            <img src="images/nitlogo.png">
+            <h2>NIT Durgapur</h2>
+		        <h1>Student Information Center</h1>
+        </div>
+	</header>
+
+	<nav>
+     	<ul>
+            <li><a target="blank" href="index.html"> <br>Home</a></li>
+            <li><a href="login.php"><br>Login</a></li>
+            <li><a href="streg4.html"><br>Student Register</a></li>
+            <li><a href="about.html"><br>About Us</a></li>
+            <li><a href="contact.html"><br>Contact Us</a></li>
+
+         </ul>
+    </nav>
+
+
+
+    <form name="myForm" onsubmit="return validateForm();" method="post" action="test-form.php">
+    	<div class="main" style="margin-top:200px;">
+    	<fieldset>
+        <legend>PERSONAL INFORMATION</legend>
+        <table class="table1">
+        	<tr>
+          		<td style="text-align:right"><label for="fname">FIRST NAME</label></td>
+          		<td style="text-align:left"><input type="text" id="fname" name="fname" maxlength="30" onblur="validate(1,this.id);">
+          		<span id="fname_empty" style='color: red; display: none'>Required</span>
+				<span id="fname_error" style='color: red; display: none'>Not Valid</span></td>
+          
+          		<td style="text-align:right"><label for="mname">MIDDLE NAME</label></td>
+          		<td style="text-align:left"><input type="text" id="mname" name="mname" maxlength="30"></td>
+
+          		<td style="text-align:right"><label for="lname">LAST NAME</label></td>
+          		<td style="text-align:left"><input type="text" id="lname" name="lname" maxlength="30"></td>
+          	</tr>
+
+         	<tr>
+         		<td style="text-align:right">
+				<span id="fname_empty" style='color: red; display: none'>Required</span>
+				<span id="fname_error" style='color: red; display: none'>Not Valid</span>
+				</td>
+			</tr>
+
+			<tr>
+          		<td style="text-align:right"><label for="ffname">FATHER'S NAME</label></td>
+          		<td style="text-align:left"><input type="text"  id="ffname" name="ffname" maxlength="30" onblur="validate(2,this.id);">
+          		<span id="ffname_empty" style='color: red; display: none'>Required</span>
+				<span id="ffname_error" style='color: red; display: none'>Not Valid</span></td>
+
+          		<td style="text-align:right"><label for="fmname">MIDDLE NAME</label></td>
+          		<td style="text-align:left"><input type="text" id="fmname" name="fmname"maxlength="30"></td>
+
+          		<td style="text-align:right"><label for="flame">LAST NAME</label></td>
+          		<td style="text-align:left"><input type="text" id="flname" name="flname" maxlength="30"></td>
+          	</tr>
+
+
+          	<tr>
+          		<td style="text-align:right"><label for="nationality">NATIONALITY</label></td>
+          		<td style="text-align:left"><input type="text" id="nationality" name="nationality"maxlength="30" onblur="validate(3,this.id);" >
+          		<span id="nationality_empty" style='color: red; display: none'>Required</span>
+				<span id="nationality_error" style='color: red; display: none'>Not Valid</span></td>
+
+
+          		<td style="text-align:right"><label for="email">EMAIL</label></td>
+          		<td style="text-align:left"><input type="text" id="email" name="email" onblur="validate(4,this.id);">
+          		<span id="email_empty" style='color: red; display: none'>Required</span>
+				<span id="email_error" style='color: red; display: none'>Not Valid</span></td>
+            
+          		
+          
+          		<td style="text-align:right"><label for="mobnum">MOBILE NUMBER</label></td>
+          		<td style="text-align:left"><input type="text" id="mobnum" name="mobnum" maxlength="10" onblur="validate(5,this.id);">
+          		<span id="phno_empty" style='color: red; display: none'>Required</span>
+				<span id="phno_error" style='color: red; display: none'>Not Valid</span></td>
+          	</tr>
+
+          	<tr>
+          		<td style="text-align:right"><label for="male/female">GENDER</label></td>
+          		<td style="text-align:left"><input type="radio" name="gender" id="1" value="male"onclick="display(this.name);">MALE
+                    <input type="radio" name="gender" id="2"value="female" onclick="display(this.name);">FEMALE
+                    <input type="radio" name="gender" id="3"value="other" onclick="display(this.name);">OTHER</td>
+
+                <td style="text-align:left"><span id="gender" style='color:red; display: none'>Select one of these</span></td>
+                <td></td>
+          		<td style="text-align:right"><label for="dob">DATE OF BIRTH</label></td>
+          		<td style="text-align:left"><input type="date" id="dob" name="dob" onblur="calcAge();">
+          		Age: <span id="age" style='color: Blue;'></span>
+          		<span id='error_age' style='color:red; display:none;'>Enter valid Date of Birth</span>
+           		<span id='empty_age' style='color:red; display:none;'>Required</span></td>
+         	</tr>
+
+
+          	<tr><td><label for="hobbies">SELECT HOBBIES</label></td>
+          	<td><input type="checkbox" name="hobbie[]" id="1" value="painting" onclick="display('hobbie');">Painting</td>
+          	<tr><td style="text-align:left"><span id="hobbie" style='color:red; display: none'>Select atleast one of these</span></td>
+          	<td><input type="checkbox" name="hobbie[]" id="2"value="sports" onclick="display(this.name);" >Sports</td></tr>
+          	<tr><td></td>	<td><input type="checkbox" name="hobbie[]" id="3"value="music/dance" onclick="display('hobbie');" >Music/Dance</td></tr>
+          	<tr><td></td>	<td><input type="checkbox" name="hobbie[]" id="4"value="travel" onclick="display('hobbie');">Travelling</td></tr>
+          	<tr><td></td>	<td><input type="checkbox" name="hobbie[]" id="5"value="books" onclick="display('hobbie');">Reading Books</td></tr>
+
+		</table>
+		</fieldset>
+		</div>
+
+		<div class="main">
+		<fieldset>
+        <legend>EDUCATIONAL INFORMATION</legend>
+        <table class="table2">
+        	<tr style="font-style:oblique;">
+        		<td></td>
+        	 	<td ><label for="boardname">Name of the Board</label></td>
+        	 	<td><label for="schoolname">Name of the School</label></td>
+        	 	<td><label for="place">Place</label></td>
+        	 	<td><label for="percentage">Percentage</label></td>
+        	 	<td><label for="year">Year</label></td>
+        	</tr>
+        	<tr>
+        		<td>CLASS X DETAILS:</td>
+				<td ><input type="text" id="b1name" name="b1name" maxlength="50" onblur="validate(9,this.id);">
+				<span id='empty_b1name' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_b1name' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+				<td><input type="text" id="s1name" name="s1name" maxlength="50" onblur="validate(10,this.id);">
+				<span id='empty_s1name' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_s1name' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+				<td><input type="text" id="place1" name="place1" maxlength="50" onblur="validate(11,this.id);">
+				<span id='empty_place1' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_place1' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+          		<td><input type="number" id="percent1" name="percent1" min="0"max="100" onblur="validate(12,this.id);">
+          		<span id='empty_percent1' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_percent1' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+          		<td><input type="number" id="year1" name="year1" onblur="validate(13,this.id);">
+          		<span id='empty_year1' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_year1' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+
+          	</tr>
+          	<tr>
+        		<td>CLASS XII DETAILS:</td>
+				<td ><input type="text" id="b2name" name="b2name" maxlength="50" onblur="validate(14,this.id);">
+				<span id='empty_b2name' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_b2name' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+				<td><input type="text" id="s2name" name="s2name" maxlength="50" onblur="validate(15,this.id);">
+				<span id='empty_s2name' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_s2name' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+				<td><input type="text" id="place2" name="place2" maxlength="50" onblur="validate(16,this.id);">
+				<span id='empty_place2' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_place2' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+          		<td><input type="number" id="percent2" name="percent2" min="0"max="100" onblur="validate(17,this.id);">
+          		<span id='empty_percent2' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_percent2' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+          		<td><input type="number" id="year2" name="year2" onblur="validate(18,this.id);">
+          		<span id='empty_year2' style='color:red; display:none; text-align:left;'>Required</span>
+				<span id='error_year2' style='color:red; display:none; text-align:left;'>Not Valid</span></td>
+         	</tr>
+
+         	<tr>
+         		
+
+        		<td style="text-align:right"><label for="degree">DEGREE</label></td>
+          		<td style="text-align:left"><input type="radio" name="degree" id="1" value="Btech"onchange="displaydegree(this.value,this.name);" >B.TECH<br>
+                    <input type="radio" name="degree" id="2"value="Mtech" onchange="displaydegree(this.value,this.name);">M.TECH<br>
+                    <input type="radio" name="degree" id="3"value="MCA" onchange="displaydegree(this.value,this.name);" >MCA
+
+                <span id="degree" style='color:red; display: none'>Select one of these</span></td>
+
+        		<td><span id="dept" style="text-align:right; display:none">DEPARTMENT:</span></td>
+
+         		<td><span id="depts" style="text-align:right; display:none">
+         		<select id="deptv" onblur="rolld(this.id)" name="deptv">
+              			<option value="S">Select your Department</option>
+              			<option value="BT">Biotechnology</option> 
+              			<option value="CH">Chemical Engineering</option>
+              			<option value="CE">Civil Engineering</option> 
+              			<option value="CS">Computer Science and Engineering</option>
+             			<option value="EC">Electronics and Communication Engineering</option>
+             			<option value="EE">Electrical Engineering</option>
+             			<option value="IT">Information Technology</option> 
+             			<option value="ME">Mechanical Engineering</option> 
+             			<option value="MM">Metallurgical and Material Engineering</option>
+                  
+        		</select></span>
+        		<span id="depte" style="color:red;text-align:left; display:none">Required</span> </td>
+        		
+
+        		<td><span id="sem" style="text-align:right; display:none">SEMESTER:</span></td>
+        		<td><span id="bsems" style="text-align:right; display:none">
+        		<select id="semb" name="semb" onblur="validsem(this.id);">
+              			<option value="S">Select your Semester</option>
+              			<option value="1">First semester</option>
+             			<option value="2">Second semester</option> 
+             			<option value="3">Third semester</option>
+             			<option value="4">Fourth semester</option>
+              			<option value="5">Fifth semester</option>
+              			<option value="6">Sixth semester</option>
+             			<option value="7">Seventh semester</option>
+              			<option value="8">Eighth semester</option>          
+        		</select></span>
+        		
+        		<span id="msems" style="text-align:right; display:none">
+        		<select id="semm" name="sem"  onblur="validsem(this.id);">
+              			<option value="S">Select your Semester</option>
+              			<option value="1">First semester</option>
+             			<option value="2">Second semester</option> 
+             			<option value="3">Third semester</option>
+             			<option value="4">Fourth semester</option>
+              			         
+        		</select></span>
+            <span id="casems" style="text-align:right; display:none">
+            <select id="semca" name="semca"  onblur="validsem(this.id);">
+                    <option value="S">Select your Semester</option>
+                    <option value="1">First semester</option>
+                  <option value="2">Second semester</option> 
+                  <option value="3">Third semester</option>
+                  <option value="4">Fourth semester</option>
+                  <option value="5">Fifth semester</option>
+                    <option value="6">Sixth semester</option>
+                             
+            </select></span>
+        		<span id="seme" style="color:red; text-align:left; display:none;">Required</span></td>
+        		</tr>
+
+        		<tr>
+        		<td style="text-align:right"><label for="regno">Registration No.</label></td>
+        		<td><input type="number" id="regnum" name="regnum" onblur="validateRegNo(this.id)">
+        		<span id="reg_empty" style="color:red; text-align:left; display:none;">Required</span>
+        		<span id="reg_error" style="color:red; text-align:left; display:none;">Not Valid</span> 
+        		</td>
+        		
+        		<td style="text-align:right"><label for="rollno">Roll No.</label></td>
+        		<td style="text-align:center"><span id="regn" style="color:blue;"></span>
+        		/&nbsp<span id="dept-code" style="color:blue;"></span>
+        		/ &nbsp&nbsp 
+        		<input type="number" style="width:50px;" id="roll" name="roll" onblur="validate(21,this.id);">
+        		<span id="roll_empty" style="color:red; text-align:left; display:none;">Required</span>
+        		<span id="roll_error" style="color:red; text-align:left; display:none;">Not Valid</span>
+        		</td>
+        		
+        		<td style="text-align:right"><label for="cgpa">Current CGPA</label></td>
+        		<td style="text-align:center"><input type="number" id="cgpa" name="cgpa"min="0"max="10" onblur="validate(22,this.id);">
+        		<span id="cgpa_empty" style="color:red; text-align:left; display:none;">Required</span>
+        		<span id="cgpa_error" style="color:red; text-align:left; display:none;">Not Valid</span>
+        		</td>
+        		</table>
+         </fieldset>
+         </div>
+
+         
+         <div class="main">
+         <fieldset>
+   		<legend>ADDRESS</legend>
+    	
+   		<table>
+    		<tr>
+    		<td></td><td>
+    		<label for="yes/no">Is your present address and permanent address same?</label>
+      		<input type="radio" name="yes/no" id="1" value="1" onchange="addr(1)">YES
+      		<input type="radio" name="yes/no" id="2" value="2" >NO</td>
+      		</tr>
+      		<tr>
+     		<td><fieldset><legend style="font-size:18px;">PRESENT ADDRESS</legend>
+     		<table>
+         	<tr><td style="text-align:right;"><label for="flatno">FLAT NO.:</label></td>
+            	<td><input type="text" id="flatno1" name="flatno1" onblur="validate(23,this.id);">
+            	<span id="flatno_empty"style="text-align:left;color:red;display:none;">Required</span>
+            	<span id="flatno_error"style="text-align:left;color:red;display:none;">Not Valid</span></td> 
+            
+        		<td style="text-align:right;"><label for="street">STREET:</label></td>
+            	<td><input type="text" id="street1" name="street1"></td>
+            </tr>
+            <tr>
+        		
+         		<td style="text-align:right;"><label for="city">CITY:</label></td>
+            	<td><input type="text" id="city1" name="city1"  onblur="validate(24,this.id);">
+            	<span id="city_empty"style="text-align:left;color:red;display:none;">Required</span>
+            	<span id="city_error"style="text-align:left;color:red;display:none;">Not Valid</span></td>
+            	<td style="text-align:right;"><label for="state">STATE:</label></td>
+            	<td><input type="text" id="state1"name="state1"></td>
+            </tr>
+            <tr>
+        		<td style="text-align:right;"><label for="pincode">PINCODE:</label></td>
+            	<td><input type="number" id="pincode1"name="pincode1"></td>
+            	<td style="text-align:right;"><label for="country">COUNTRY:</label></td>
+            	<td><input type="text" id="country1" name="country1" onblur="validate(25,this.id);">
+            	<span id="country_empty"style="text-align:left;color:red;display:none;">Required</span>
+            	<span id="country_error"style="text-align:left;color:red;display:none;">Not Valid</span></td>
+        		
+            </tr>
+        	
+       </table>         
+      </fieldset></td>
+
+      <td><fieldset><legend style="font-size:18px;">PERMAMENT ADDRESS</legend>
+     		<table>
+         	<tr><td style="text-align:right;"><label for="flatno">FLAT NO.:</label></td>
+            	<td><input type="text" id="flatno2" name="flatno2"></td>            
+	       		<td style="text-align:right;"><label for="street">STREET:</label></td>
+            	<td><input type="text" id="street2" name="street2">
+            	</td>
+            </tr>
+            <tr>
+        		
+         		<td style="text-align:right;"><label for="city">CITY:</label></td>
+            	<td><input type="text" id="city2" name="city2"></td>
+            	<td style="text-align:right;"><label for="state">STATE:</label></td>
+            	<td><input type="text" id="state2" name="state2"></td>
+            </tr>
+            <tr>
+        		<td style="text-align:right;"><label for="pincode">PINCODE:</label></td>
+            	<td><input type="number" id="pincode2" name="pincode2"></td>
+            	<td style="text-align:right;"><label for="country">COUNTRY:</label>
+            	<td><input type="text" id="country2" name="country2"></td>
+        		
+            </tr>
+        	
+       </table>         
+      </fieldset></td>
+      </tr>
+      </table>
+      </fieldset>
+      </div>
+
+      <div class="main">
+      <fieldset><legend>SET PROFILE</legend>
+
+      <table>
+      <tr>
+      	<td style="text-align:right;"><label for="userId">USER ID</label></td>
+      	<td><input type="text" id="userid" name="userid" onblur="validate(26,this.id);">
+      	<span id="userid_empty"style="text-align:left;color:red;display:none;">Required</span>
+      	<span id="userid_error"style="text-align:left;color:red;display:none;">Not Valid(Only letters are allowed)</span>
+      	</td>
+      </tr>
+      <tr>
+      	<td style="text-align:right;"><label for="password">PASSWORD</label></td>
+      	<td><input type="password" id="pass" name="pass_word" onblur="validate(27,this.id);" >
+      	<span id="pass_empty"style="text-align:left;color:red;display:none;">Required</span>
+      	<span id="pass_error"style="text-align:left;color:red;display:none;">Not Valid</span>
+      	</td>
+      </tr>
+      <tr>
+      	<td style="text-align:right;"><label for="password">CONFIRM PASSWORD</label></td>
+      	<td><input type="password" id="cpass" name="cpass_word" onblur="validate(28,this.id);">
+      	<span id="cpass_empty"style="text-align:left;color:red;display:none;">Required</span>
+      	<span id="cpass_error"style="text-align:left;color:red;display:none;">Passwords donot match.</span></td>
+      </tr>
+      <tr>
+      	<td><p style="font-style:oblique">Fill in the following details in case you forgot the password:</p></td></tr>
+      	<tr><td style="text-align:right;">SECURITY QUESTION:</td>
+      	<td><select id="question" name="question">
+           <option value="0">Select your security question</option>
+           <option value="1">Who is your favourite  hero?</option>
+           <option value="2">Who is your favourite  cricketer?</option>
+           <option value="3">what is your favourite food?</option>
+           <option value="4">what is your favourite place to visit?</option>
+        </select>
+        <span  id="q_empty"style="text-align:left;color:red;display:none;">Required</span></td>
+        </tr>
+        
+        <tr>
+         	<td style="text-align:right;"><label for="ans">ANSWER</label></td>
+         	<td><input type="text" id="ans" name="ans">
+         	<span  id="a_empty"style="text-align:left;color:red;display:none;">Required</span></td>
+      	</tr>
+        </table>
+        </fieldset>
+        </div>
+
+       
+
+		<br><br>
+		<button class="button" type="submit" style="margin-left: 450px;">Submit</button>
+		<button type="reset" value="reset" class="button" onclick="location.href='streg4.html'">Reset</button>
+		<br><br><br><br><br><br>
+
+	</form>	
+
+
+
+
+
+</body>
+</html>

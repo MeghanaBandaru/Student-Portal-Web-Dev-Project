@@ -1,0 +1,259 @@
+
+
+
+body {
+    margin: 0px;
+    background-color: #ffffff;
+    height: 800px;
+    width: 100%;
+    background-image: url(images/college-students_.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+
+}
+
+header img {
+    float: right;
+    left: 1050px;
+    top:30px;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+}
+
+header h1 {
+    float:left;
+    text-decoration: none;
+  position: absolute;
+  top: 18px;
+  left: 10px;
+}
+header h2 {
+    float:right;
+  position: absolute;
+  top: 18px;
+  left: 1100px;
+}
+
+header{
+    font-family: Arial;
+       text-shadow: 2px 2px 8px #1a1a1a;
+
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #40e0d0;
+    clear: left;
+    text-align: center;
+    border-bottom: transparent;
+    position: fixed;
+     /* background: linear-gradient(#262626, #00ace6,#00ace6,#00ace6,#ffffff);*/
+     box-shadow: 16px 12px 16px 0 rgba(0,0,0,0.39),16px 17px 50px 0 rgba(0,0,0,0.19);
+}
+nav {
+    font-family: Arial;
+
+    width: 100%;
+    margin-top: 90px;
+    height: 50px;
+    background-color: #40e0d0;
+    position: fixed;
+    overflow: hidden;
+         box-shadow: 16px 12px 16px 0 rgba(0,0,0,0.39),16px 17px 50px 0 rgba(0,0,0,0.19);
+
+
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float:left;
+    width:100%;
+    overflow: hidden;
+
+}
+
+
+li {
+    float: left;
+    width:20%;
+    /*min-width: 243px;
+    overflow: hidden;*/
+}
+
+a:link, a:visited {
+    display: block;
+    height: 48px;
+    min-width: 243px;
+    font-size: 18px;
+    color: #FFFFFF;
+    border-right: 2px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    text-shadow: 2px 2px 8px #1a1a1a;
+
+
+
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2pt;
+    line-height: 100%;
+    overflow: hidden;
+}
+
+a:hover, a:active {
+    display: block;
+    height: 55px;
+    min-width: 243px;
+    font-size: 19px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: transparent;
+        text-shadow: 2px 2px 8px #0d0d0d;
+        text-decoration: underline;
+
+    /*box-shadow: 20px 12px 16px 12px rgba(0,0,0,0.50),20px 17px 50px 12px rgba(0,0,0,0.50);*/
+
+}
+
+
+    .button {
+
+    /*position: center;*/
+    background-color: #ff9900;
+    border: none;
+    font-size: 25px;
+    color: #FFFFFF;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    text-shadow:2px 2px 8px #1a1a1a;
+    margin-left: 200px;
+    margin-top: 80px;
+
+}
+
+.button:hover {
+    box-shadow: 0 0 20px #000;
+    font-size: 28px;
+
+        text-decoration: underline;
+
+}
+.button_new{
+    background-color: #40e0d0;
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 4px;
+    width: 100px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    text-shadow:2px 2px 8px #1a1a1a;
+    /*margin-left: 200px;
+    margin-top: 80px;*/
+}
+.button_new:hover {
+    box-shadow: 0 0 20px #000;
+    font-size: 20px;
+
+        text-decoration: underline;
+
+}
+
+
+.main{
+    width: 90%;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 230px;
+    font-family: "Arial", Helvetica, sans-serif;
+    font-size: 15px;
+    text-shadow:2px 2px 8px #afafaf;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    background-color: #f2f2f2;
+    padding: 15px;
+    float: left;
+    box-shadow: 0 0 20px #000;
+ } 
+ 
+
+input[type=text], input[type=password],input[type=email], select {
+    width: 140px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+/*    box-sizing: border-box;
+*/}
+input[type=number],input[type=mno] {
+    width: 140px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+/*    box-sizing: border-box;
+*/}
+select {
+    width: 180px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+/*    box-sizing: border-box;
+*/}
+legend{
+    font-style: oblique;
+    font-size: 20px;
+}
+.table1
+{
+    border-spacing: 20px 10px;
+
+}
+.table2
+{
+    border-spacing: 20px 10px;
+    text-align: center;
+
+
+}
+.table3
+{
+    width: 100%;
+    text-align: center;
+    border: 1px #808080;
+    border-collapse: collapse;
+    height: 40px;
+    line-height: 50px;
+}
+.errortb
+{
+    text-align:right;
+    color: red;
+}
+
+
+
+
